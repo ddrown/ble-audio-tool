@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Audio Converter: WAV &lt;&gt; LC3</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Web Audio Converter: WAV &lt;&gt; LC3</h1>
+    <div class="main-grid">
+      <!-- File Input & Selection -->
+      <section class="panel file-input">
+        <h2>1. File Input &amp; Selection</h2>
+        <div class="file-buttons">
+          <button class="btn upload">Upload WAV File</button>
+          <button class="btn record">Record Audio</button>
+        </div>
+        <div class="file-drop">
+          <span class="cloud-icon">☁️</span>
+          <span>Or drag and drop your file here</span>
+        </div>
+        <div class="selected-file">
+          Selected File: <span class="filename">audio_demo.wav</span>
+        </div>
+        <button class="btn clear">Clear Selection</button>
+      </section>
+
+      <!-- Conversion Options -->
+      <section class="panel conversion-options">
+        <h2>2. Conversion Options</h2>
+        <div class="lcc-settings">
+          <label>Bitrate:
+            <select>
+              <option>320 kbps</option>
+              <option>256 kbps</option>
+              <option>192 kbps</option>
+              <option>160 kbps</option>
+              <option>128 kbps</option>
+              <option>96 kbps</option>
+              <option>64 kbps</option>
+              <option>48 kbps</option>
+              <option>32 kbps</option>
+              <option>16 kbps</option>
+            </select>
+          </label>
+          <label>Sampling Rate:
+            <select>
+              <option>96 kHz</option>
+              <option>48 kHz</option>
+              <option>32 kHz</option>
+              <option>24 kHz</option>
+              <option>16 kHz</option>
+              <option>8 kHz</option>
+            </select>
+          </label>
+          <label>Channels:
+            <select>
+              <option>Stereo</option>
+              <option>Mono</option>
+            </select>
+          </label>
+          <label>High Resolution Mode:
+            <select>
+              <option>Enabled</option>
+              <option>Disabled</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn convert" id="convert-btn">Convert to LC3 <span class="arrow">→</span></button>
+      </section>
+
+      <!-- Output & Download -->
+      <section class="panel output-download">
+        <h2>3. Output &amp; Download</h2>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%"></div>
+        </div>
+        <div class="conversion-status">Conversion Status: Processing...</div>
+        <button class="btn download">Download audio_demo.lc3</button>
+        <button class="btn play">Play Original</button>
+        <button class="btn play">Play Converted</button>
+      </section>
+    </div>
+    <div class="bottom-bar">
+      <a href="#" class="link">Learn more about LC3</a>
+      <a href="#" class="link">About this tool</a>
+    </div>
+  </div>
+  <script src="src/main.js" type="module"></script>
+</body>
+</html>
