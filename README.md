@@ -29,7 +29,7 @@ This uses emscripten
 ```
 make CC="emcc" LDFLAGS="-sSIDE_MODULE=1" CFLAGS=-fPIC V="" tools
 
-emcc build/src/attdet.o build/src/bits.o build/src/bwdet.o build/src/energy.o build/src/lc3.o build/src/ltpf.o build/src/mdct.o build/src/plc.o build/src/sns.o build/src/spec.o build/src/tables.o build/src/tns.o build/tools/elc3.o build/tools/lc3bin.o build/tools/wave.o -o bin/elc3mod.js -s EXPORT_ES6=1 -s MODULARIZE=1
+emcc build/src/attdet.o build/src/bits.o build/src/bwdet.o build/src/energy.o build/src/lc3.o build/src/ltpf.o build/src/mdct.o build/src/plc.o build/src/sns.o build/src/spec.o build/src/tables.o build/src/tns.o build/tools/elc3.o build/tools/lc3bin.o build/tools/wave.o -o bin/elc3mod.js -s EXPORT_ES6=1 -s MODULARIZE=1 -s EXPORTED_RUNTIME_METHODS=FS
 ```
 
 ## License

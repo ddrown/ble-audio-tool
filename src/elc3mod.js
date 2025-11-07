@@ -4093,6 +4093,7 @@ function dbg(...args) {
       return ret;
     };
 
+
   FS.createPreloadedFile = FS_createPreloadedFile;
   FS.staticInit();
   // Set module methods based on EXPORTED_RUNTIME_METHODS
@@ -4148,6 +4149,7 @@ var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji', 
 // include: postamble.js
 // === Auto-generated postamble setup entry stuff ===
 
+Module['FS'] = FS;
 var missingLibrarySymbols = [
   'writeI53ToI64',
   'writeI53ToI64Clamped',
@@ -4410,7 +4412,6 @@ var unexportedSymbols = [
   'FS_createPath',
   'FS_createDevice',
   'FS_readFile',
-  'FS',
   'FS_createDataFile',
   'FS_createLazyFile',
   'MEMFS',
